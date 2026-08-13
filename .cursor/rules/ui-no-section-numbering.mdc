@@ -1,0 +1,15 @@
+---
+description: Never prefix UI section titles with numbers (e.g. use Crop Management not 5. Crop Management)
+alwaysApply: true
+---
+
+# UI Section Titles — No Number Prefixes
+
+When implementing CyraAgroLink UI from designs:
+
+- Do **not** include leading numbers or step indices in section tabs, page banners, or module titles.
+- Examples:
+  - Use `Crop Management` — not `5. Crop Management`
+  - Use `Farm Registration` — not `4. Farm Registration`
+- If a mockup shows `N. Section Name`, render only `Section Name`.
+- Wizard step numbers inside progress steppers (1, 2, 3…) are fine; only omit numbers from **section/module title labels**.

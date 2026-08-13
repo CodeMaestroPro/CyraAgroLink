@@ -1,0 +1,215 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --cyra-forest: 16 133 63;
+    --cyra-green: 26 155 76;
+    --cyra-leaf: 47 143 78;
+    --cyra-mint: 232 245 233;
+    --cyra-soft: 184 224 196;
+    --cyra-sun: 230 168 23;
+    --cyra-amber: 196 120 43;
+    --cyra-soil: 92 64 51;
+    --cyra-ink: 31 41 55;
+    --cyra-muted: 107 114 128;
+    --cyra-cream: 247 244 239;
+    --cyra-line: 230 235 231;
+    --cyra-surface: 244 248 245;
+    --cyra-panel: 237 244 239;
+    --cyra-card: 255 255 255;
+}
+
+html.dark {
+    color-scheme: dark;
+    --cyra-forest: 46 168 96;
+    --cyra-green: 56 186 108;
+    --cyra-leaf: 92 186 122;
+    --cyra-mint: 24 48 34;
+    --cyra-soft: 48 92 64;
+    --cyra-sun: 232 180 56;
+    --cyra-amber: 214 150 78;
+    --cyra-soil: 176 142 118;
+    --cyra-ink: 232 238 233;
+    --cyra-muted: 156 168 160;
+    --cyra-cream: 22 34 27;
+    --cyra-line: 48 68 56;
+    --cyra-surface: 15 26 20;
+    --cyra-panel: 22 36 28;
+    --cyra-card: 21 36 28;
+}
+
+[x-cloak] {
+    display: none !important;
+}
+
+@layer base {
+    h1,
+    h2,
+    h3 {
+        @apply font-display tracking-tight;
+    }
+
+    html.dark .bg-white {
+        background-color: rgb(var(--cyra-card));
+    }
+
+    html.dark .bg-white\/60,
+    html.dark .bg-white\/90 {
+        background-color: rgb(var(--cyra-card) / 0.85);
+    }
+
+    html.dark .placeholder\:text-cyra-muted::placeholder {
+        color: rgb(var(--cyra-muted));
+    }
+
+    html.dark input,
+    html.dark select,
+    html.dark textarea {
+        color-scheme: dark;
+    }
+}
+
+@layer components {
+    .cyra-section-title {
+        @apply font-display text-lg font-bold tracking-tight text-cyra-ink sm:text-xl;
+    }
+
+    .cyra-section-kicker {
+        @apply text-[11px] font-semibold uppercase tracking-[0.16em] text-cyra-forest;
+    }
+
+    .cyra-heading-panel {
+        @apply rounded-2xl bg-cyra-mint/70 px-4 py-3 ring-1 ring-cyra-soft/50 sm:px-5;
+    }
+
+    /* Marketing page rhythm */
+    .cyra-section {
+        @apply scroll-mt-24 px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24;
+    }
+
+    .cyra-container {
+        @apply mx-auto w-full max-w-7xl;
+    }
+
+    .cyra-section-heading {
+        @apply font-display text-2xl font-extrabold tracking-tight text-cyra-ink sm:text-3xl lg:text-4xl;
+    }
+
+    .cyra-section-copy {
+        @apply mt-3 max-w-2xl text-sm leading-relaxed text-cyra-muted sm:text-base;
+    }
+
+    .cyra-btn-primary {
+        @apply inline-flex items-center justify-center gap-2 rounded-lg bg-cyra-forest px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-cyra-green focus:outline-none focus-visible:ring-2 focus-visible:ring-cyra-forest focus-visible:ring-offset-2 focus-visible:ring-offset-cyra-surface;
+    }
+
+    .cyra-btn-secondary {
+        @apply inline-flex items-center justify-center gap-2 rounded-lg border border-cyra-line bg-cyra-card px-5 py-3 text-sm font-semibold text-cyra-ink transition hover:border-cyra-forest hover:text-cyra-forest focus:outline-none focus-visible:ring-2 focus-visible:ring-cyra-forest focus-visible:ring-offset-2 focus-visible:ring-offset-cyra-surface;
+    }
+
+    .cyra-btn-link {
+        @apply inline-flex items-center gap-1.5 text-sm font-semibold text-cyra-forest transition hover:text-cyra-green;
+    }
+
+    .cyra-tabs {
+        @apply inline-flex max-w-full gap-1 overflow-x-auto rounded-full bg-cyra-mint/80 p-1 ring-1 ring-cyra-soft/60 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden;
+    }
+
+    .cyra-tab {
+        @apply shrink-0 rounded-full px-3.5 py-2 text-xs font-semibold text-cyra-muted transition sm:px-4 sm:text-sm;
+    }
+
+    .cyra-tab-active {
+        @apply bg-cyra-forest text-white shadow-soft;
+    }
+
+    .cyra-tab-idle {
+        @apply hover:text-cyra-forest;
+    }
+
+    .cyra-panel {
+        @apply rounded-2xl bg-white ring-1 ring-cyra-line/80;
+    }
+
+    .cyra-media {
+        @apply overflow-hidden rounded-2xl bg-cyra-forest;
+    }
+}
+
+
+@keyframes cyra-fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes cyra-kenburns {
+    from {
+        transform: scale(1.08);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes cyra-float {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+@keyframes cyra-pulse-soft {
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.85;
+        transform: scale(1.04);
+    }
+}
+
+.cyra-reveal {
+    opacity: 0;
+    transform: translateY(22px);
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+.cyra-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.cyra-icon-badge {
+    @apply inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-cyra-mint text-cyra-forest transition;
+}
+
+.cyra-icon-badge-lg {
+    @apply inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-cyra-mint text-cyra-forest;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .cyra-reveal,
+    .cyra-reveal.is-visible,
+    .motion-safe\:animate-\[cyra-fade-up_0\.8s_ease-out_both\],
+    .motion-safe\:animate-\[cyra-kenburns_18s_ease-out_forwards\] {
+        opacity: 1 !important;
+        transform: none !important;
+        animation: none !important;
+        transition: none !important;
+    }
+}
+

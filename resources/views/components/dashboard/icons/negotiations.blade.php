@@ -1,0 +1,1 @@
+<svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M8 10h8M8 14h5M7 5h10a2 2 0 0 1 2 2v9.5L15 14H7a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"/></svg>

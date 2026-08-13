@@ -1,0 +1,21 @@
+---
+description: CyraAgroLink farms include crops, poultry, aquaculture, and related agribusinesses
+alwaysApply: true
+---
+
+# Farm enterprise types
+
+Farms on this platform are **not crop-only**. Treat “farm” as any agricultural or agribusiness enterprise, including:
+
+- **Crops** — maize, cassava, rice, yam, vegetables, cocoa, oil palm, etc.
+- **Poultry** — broilers, layers, hatcheries, poultry feed operations
+- **Aquaculture** — fish farming (e.g. catfish, tilapia), hatcheries, ponds
+- **Other livestock** — pigs, goats, cattle, snails, rabbits, and similar
+- **Related agribusiness** — storage, processing, feed milling, and other farm-linked activities when the module context allows
+
+## Implementation guidance
+
+- Seed data, marketplaces, registration pickers, dashboards, and marketing copy should reflect this mix—not only crop field language.
+- Prefer labels like **enterprises**, **production types**, or **farm activities** when the UI is not strictly crop-cycle specific.
+- When adding demo investments or farm samples, include poultry/layers/fish (and other livestock) alongside crops.
+- Do not assume soil type, hectare-only sizing, or crop growth stages apply to every enterprise; keep livestock/aquaculture flows sensible when those modules are touched.
